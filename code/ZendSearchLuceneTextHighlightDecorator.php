@@ -20,7 +20,7 @@ class ZendSearchLuceneTextHighlightDecorator extends Extension {
      *                                  around the output. Default is true.
      * @return An HTMLText object containing the highlighted text as HTML.
      */
-    public function SearchTextHighlight($numWords = 25,$addParaTags=true) {
+    public function SearchTextHighlight($numWords = 25,$addParaTags=false) {
         $words = explode(' ',$_REQUEST['Search']);
         $text = strip_tags($this->owner->value);
         $orig = $text;
